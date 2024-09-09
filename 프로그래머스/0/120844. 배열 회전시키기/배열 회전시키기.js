@@ -1,3 +1,11 @@
 const solution = (numbers, direction) => {
-    return direction === "right" ? [numbers[numbers.length -1], ...numbers.slice(0,  numbers.length -1)] : [...numbers.slice(1), numbers[0]]
+    const copiedNumbers = [...numbers]
+    
+    if(direction === "right"){
+        copiedNumbers.unshift(copiedNumbers.pop());
+    } else if (direction === "left"){
+        copiedNumbers.push(copiedNumbers.shift())
+    }
+    
+    return copiedNumbers
 }
