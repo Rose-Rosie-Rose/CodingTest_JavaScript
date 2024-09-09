@@ -1,4 +1,6 @@
 const solution = (num, k) => {
-    const idx = num.toString().indexOf(k)
-    return idx === -1 ? -1 : idx + 1
+    const numStr = num.toString();
+    const index = numStr.indexOf(k.toString()); 
+    
+    return index === -1 ? -1 : index + 1
 }
