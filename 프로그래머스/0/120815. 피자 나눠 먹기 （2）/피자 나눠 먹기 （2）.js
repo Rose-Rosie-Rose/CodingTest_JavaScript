@@ -1,7 +1,10 @@
 const solution = (n) => {
-    let pizza = 1
-    while(pizza * 6 % n !== 0){
-        pizza += 1
+    let slices = 6; 
+    let pizzas = 1; 
+
+    while ((slices * pizzas) % n !== 0) {
+        pizzas++;
     }
-    return pizza
+
+    return pizzas;
 }
