@@ -1,5 +1,8 @@
 const solution = (age) => {
-    const arr = age.toString().split("")
-    const alphabet = "abcdefghij"
-    return arr.map(x => alphabet[x]).join("")
-}
+  const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+
+  return String(age)
+    .split("")
+    .map((item) => alphabet[item])
+    .join("");
+};
