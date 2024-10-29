@@ -1,7 +1,12 @@
 const solution = (i, j, k) => {
-    let result = ''
-    for(i; i <= j; i++){
-        result += i
+    let count = 0;
+    for (let a = i; a <= j; a++) {
+        let str = a.toString();
+        for (let char of str) {
+            if (char === k.toString()) {
+                count += 1;
+            }
+        }
     }
-    return result.split(k).length - 1
+    return count;
 }
