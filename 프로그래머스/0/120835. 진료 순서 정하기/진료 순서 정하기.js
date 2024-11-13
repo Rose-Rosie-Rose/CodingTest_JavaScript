@@ -1,8 +1,5 @@
 const solution = (emergency) => {
-    const newEmerg = [...emergency].sort((a, b) => b - a)
-    let result = []
-    for (let i = 0; i < emergency.length; i++) {
-    result.push(newEmerg.indexOf(emergency[i]) + 1);
-  }
-    return result
-}
+  const sorted = [...emergency].sort((a, b) => b - a);
+
+  return emergency.map(item => sorted.indexOf(item) + 1);
+};
