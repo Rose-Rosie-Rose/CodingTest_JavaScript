@@ -1,14 +1,11 @@
 const solution = (n) => {
-  let result = 1;
-  for (let i = 1; i <= n; i++) {
-    result *= i;
+  let i = 1;
+  let factorial = 1;
 
-    if (result === n) {
-      return i;
-    }
-
-    if (result > n) {
-      return i - 1;
-    }
+  while (factorial * (i + 1) <= n) {
+    i++;
+    factorial *= i;
   }
+
+  return i;
 };
